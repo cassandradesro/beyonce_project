@@ -15,9 +15,9 @@ document.addEventListener("keydown", function (e) {
     var newVideoURL = "dist/distortion_video/Distortion_"+currentVideoIndex+".mp4";
     $distortionPlayerSource.setAttribute('src', newVideoURL);
     console.log("playing",newVideoURL);
-    $mainPlayer.classList.add("active")
+    $distortionPlayer.classList.add("active")
     $distortionPlayer.load();
-    $distortionPlayer.currentTime = mainPlayer.currentTime;
+    $distortionPlayer.currentTime = $mainPlayer.currentTime;
     $distortionPlayer.play();
 
   }

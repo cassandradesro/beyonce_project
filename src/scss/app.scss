@@ -172,14 +172,12 @@ html, body{
 
 
 
-#main-video-player{
+#distortion_video-player{
+	
 	&.active{
+		z-index: 10000000;
 		visibility: hidden;
 	}
-}
-
-#distortion_video-player{
-	z-index: 10000000;
 }
 
 

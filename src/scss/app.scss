@@ -1,0 +1,183 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+@import 'reset';
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+html, body{
+
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+	background: #ccc;
+}
+
+.interaction-instructions{
+	color: black;
+	font-size: 1rem;
+	font-family: Helvetica;
+	padding-top: 800px;
+
+	span{
+		border: none;
+		background-color: black;
+		color: white;
+		text-transform: uppercase;
+		padding: 20px 12px;
+		font-size: 1.4rem;
+		width: 30px;
+		height: 15px;
+	}
+}
+
+#transition-video-player {
+	display: none;
+	z-index: 100000;
+}
+
+.video, .scene {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 100%; 
+	height: 100%;
+	overflow: hidden;
+}
+
+
+.polaroid-container{
+	background-image: url(../img/bed_bgd.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.polaroid {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 35%;
+		transform: translate(-50%, -50%);
+		transform-origin: bottom center; 
+
+		margin: 10px;	
+		box-shadow: 10px 10px 67px -1px;
+
+		&:nth-child(1) {
+			transform: rotate(4deg) translate(-55%, -50%); 
+
+		}
+
+		&:nth-child(2) {
+			transform: rotate(-4deg) translate(-50%, -60%); 
+
+		}
+		&:nth-child(3) {
+			transform: rotate(8deg) translate(-40%, -50%); 
+
+		}
+		&:nth-child(4) {
+			transform: rotate(-8deg) translate(-60%, -50%); 
+
+		}
+		&:nth-child(5) {
+			transform: rotate(0deg) translate(-40%, -70%); 
+
+		}
+		&:nth-child(6) {
+			transform: rotate(10deg) translate(-70%, -50%); 
+
+		}
+		&:nth-child(7) {
+			transform: rotate(-12deg) translate(-50%, -60%); 
+
+		}
+		&:nth-child(8) {
+			transform: rotate(10deg) translate(-55%, -40%); 
+
+		}
+		&:nth-child(9) {
+			transform: rotate(-8deg) translate(-50%, -50%); 
+
+		}
+		&:nth-child(10) {
+			transform: rotate(12deg) translate(-60%, -50%); 
+
+		}
+		&:nth-child(11) {
+			transform: rotate(4deg) translate(-50%, -70%); 
+
+		}
+		&:nth-child(12) {
+			transform: rotate(-10deg) translate(-80%, -50%); 
+
+		}
+		&:nth-child(13) {
+			transform: rotate(13deg) translate(-50%, -50%); 
+
+		}
+		&.hidden {
+			display: none;
+		}
+	}
+}
+
+.text{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	z-index: 100000000000;
+	h1, h2{
+		font-weight: bold;
+		text-transform: uppercase;
+		font-family: Helvetica, sans-serif;
+		padding-bottom: 10px;
+	}
+	div, h1{
+
+		margin: 25px;
+
+		p{
+			font-size: .8rem;
+			text-transform: uppercase;
+			font-family: Helvetica, sans-serif;
+			padding-bottom: 10px;
+			font-weight: 400;
+		}
+	}
+	div{
+		display: flex;
+		width: auto;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Polaroid</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="dist/css/app.css">
+
+	</head>
+	<body class="polaroid-container">
+		<div class="text">
+			<h1>Beyonce</h1>
+			<div>
+				<h2>Lemonade</h2>
+				<p>Watch</p>
+				<p>Listen</p>
+				<p>Buy</p>
+			</div>
+		</div>
+		<div id="scene">
+
+		  <video id="transition-video-player" class="video" muted>
+		    <source type="video/mp4" src="dist/transition_sequence/Title_sequence.mp4">
+		  </video>
+
+		  <div class="polaroids">
+			<video id="polaroid-video-player" class="polaroid" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid1.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid2.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid2-5.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid3.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid4.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid5.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid6.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid7.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid8.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid9.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid10.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid11.mp4">
+			</video>
+			<video id="polaroid-video-player" class="polaroid hidden" autoplay loop muted>
+			  <source type="video/mp4" src="dist/polaroid_video/Polaroid12.mp4">
+			</video>
+
+		  </div>
+			
+		  	<!-- <p class="interaction-instructions"> Hold the <span> spacebar</span> to begin polaroid intreraction.</p> -->
+
+		</div>
+		<!-- <audio
+		  src="dist/polaroid_video/"
+		  autoplay>
+		</audio> -->
+		
+		<script>
+			var nextPageURL = "distortion.html";
+		</script>
+
+		<script src="/node_modules/howler/dist/howler.js"></script>
+		<script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
+		<script src="dist/js/transition.js"></script>
+		<script src="dist/js/experience-polaroid.js"></script>
+
+	</body>
+</html>

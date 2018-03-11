@@ -1,0 +1,16 @@
+if ((Date.now() - keydownTime) > 3000){
+	console.log("it's been longer than 3 seconds");
+	//go to next page (window.location = 2ndinteraction.html)
+} else{
+	console.log("it's been less than 3 seconds");
+	//start over         
+}
+
+
+
+keydown swaps the home video to a distorted video 
+key up swaps back to the home video and prepares the next distortion video
+
+
+preparing next video : 
+canplaythrough = true

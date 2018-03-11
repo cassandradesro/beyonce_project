@@ -172,9 +172,15 @@ body {
 
 
 
+#main-video-player{
+	&.active{
+		visibility: hidden;
+	}
+}
 
-
-
+#distortion_video-player{
+	z-index: 10000000;
+}
 
 
 

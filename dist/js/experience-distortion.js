@@ -4,6 +4,7 @@ var currentVideoIndex = 0;
 var $distortionPlayerSource = document.querySelector("#distortion-video-player source");
 var $distortionPlayer = document.querySelector("#distortion-video-player");
 var keyWasPressed = false;
+var $mainPlayer = document.querySelector("#main-video-player");
 
 document.addEventListener("keydown", function (e) {
   if (e.keyCode != 32 && keyWasPressed === false) {
@@ -15,8 +16,9 @@ document.addEventListener("keydown", function (e) {
     var newVideoURL = "dist/distortion_video/Distortion_" + currentVideoIndex + ".mp4";
     $distortionPlayerSource.setAttribute('src', newVideoURL);
     console.log("playing", newVideoURL);
+    $mainPlayer.classList.add("active");
     $distortionPlayer.load();
-    $distortionPlayer.currentTime = 0;
+    $distortionPlayer.currentTime = mainPlayer.currentTime;
     $distortionPlayer.play();
   }
 });
@@ -32,7 +34,7 @@ document.addEventListener("keyup", function (e) {
     console.log("playing", mainVideo);
 
     $distortionPlayer.load();
-    $distortionPlayer.currentTime = 0;
+    $distortionPlayer.currentTime = $mainPlayer.currentTime;
     $distortionPlayer.play();
   }
 });

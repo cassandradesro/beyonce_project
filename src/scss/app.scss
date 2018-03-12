@@ -179,13 +179,64 @@ html, body{
 	}
 }
 
-.flower-scene{
-	background-color: #000;
-	position: relative;
-	    height: 100%;
-	    width: 100%;
-	    overflow: hidden;
+
+.flower-container{
+	background-image: url(../flower_sequence/flower_bgd.jpg)
 }
+.flowers{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.flower{
+	width: 5%;
+	height: 5%;
+}
+
+.click-flower-container{
+	font-family: Helvetica;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100000000;
+	position: absolute;
+	top: 0;
+	left: 1000px;
+	background-color: white;
+	p{
+		background-color: white;
+
+	}
+	div{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		.click-flower{
+			width: 8%;
+			height: 8%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

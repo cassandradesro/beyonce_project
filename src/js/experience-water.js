@@ -19,7 +19,6 @@ var middleMusic = new Howl({
   loop: false,
   volume: 4,
   onend: function onend() {
-    middleMusic.fade(1, 0, 3000);
     endMusic.play();
   }
 });
@@ -39,7 +38,7 @@ document.addEventListener("keydown", function (e) {
         middleMusic.stop();
         endMusic.stop();
     }
-  if (e.keyCode === 16 && keyWasPressed === false) {
+  if (e.keyCode == 16 && keyWasPressed === false) {
     
     keyWasPressed = true;
 
@@ -62,7 +61,7 @@ document.addEventListener("keyup", function (e) {
     beginMusic.play();
   }
 
-  if (e.keyCode === 16) {
+  if (e.keyCode == 16) {
     console.log("let go of a key!");
 
     keyWasPressed = false;

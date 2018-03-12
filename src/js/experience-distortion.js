@@ -684,10 +684,40 @@ document.addEventListener("keydown", function (e) {
     distortion_z.play();
 
   }
+  if (e.keyCode == 32) { // a
+    distortion_main.stop();
+    distortion_a.stop();
+    distortion_b.stop();
+    distortion_c.stop();
+    distortion_d.stop();
+    distortion_e.stop();
+    distortion_f.stop();
+    distortion_g.stop();
+    distortion_h.stop();
+    distortion_i.stop();
+    distortion_j.stop();
+    distortion_k.stop();
+    distortion_l.stop();
+    distortion_m.stop();
+    distortion_n.stop();
+    distortion_o.stop();
+    distortion_p.stop();
+    distortion_q.stop();
+    distortion_r.stop();
+    distortion_s.stop();
+    distortion_t.stop();
+    distortion_u.stop();
+    distortion_v.stop();
+    distortion_w.stop();
+    distortion_x.stop();
+    distortion_y.stop();
+    distortion_z.stop();
+    
+
+  }
 });
 
 document.addEventListener("keyup", function (e) {
-  if (e.keyCode != 32) {
     console.log("let go of a key!");
 
     keyWasPressed = false;
@@ -727,7 +757,4 @@ document.addEventListener("keyup", function (e) {
     distortion_x.stop();
     distortion_y.stop();
     distortion_z.stop();
-
-
-  }
 });

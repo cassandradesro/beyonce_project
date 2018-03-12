@@ -59,7 +59,7 @@ document.addEventListener("keydown", function (e) {
         waterMusic.stop();
         mainMusic.stop();
     }
-  if (e.keyCode === 75 && keyWasPressed === false) {
+  if (e.keyCode === 78 && keyWasPressed === false) { //n
     
     keyWasPressed = true;
 
@@ -77,7 +77,7 @@ document.addEventListener("keydown", function (e) {
     $doorPlayer.play();
     
   }
-  if (e.keyCode === 74 && keyWasPressed === false) {
+  if (e.keyCode === 79 && keyWasPressed === false) { //o
     
     keyWasPressed = true;
 
@@ -95,7 +95,7 @@ document.addEventListener("keydown", function (e) {
     $doorPlayer.play();
     
   }
-  if (e.keyCode === 76 && keyWasPressed === false) {
+  if (e.keyCode === 80 && keyWasPressed === false) { //p
     
     keyWasPressed = true;
 

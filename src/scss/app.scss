@@ -203,17 +203,21 @@ html, body{
 	top: 0;
 	right: 0;
 	background-color: white;
+	height: auto;
+    width: 100px;
+    margin: 25px 0;
+    padding: 20px;
 	p{
-		background-color: white;
-
+		text-align: center;
+		padding-bottom: 20px;		
 	}
 	div{
 		display: flex;
 		flex-direction: column;
-		align-items: flex-end;
-		.click-flower{
-			width: 8%;
-			height: 8%;
+		align-items: center;
+		.click-flower {
+			width: 60%;
+			height: 60%;
 		}
 	}
 }

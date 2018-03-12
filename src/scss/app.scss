@@ -181,7 +181,7 @@ html, body{
 
 
 .flower-container{
-	background-image: url(../flower_sequence/flower_bgd.jpg)
+	background-image: url(../flower_sequence/flower_bgd.jpg);
 }
 .flowers{
 	display: flex;
@@ -202,7 +202,7 @@ html, body{
 	position: absolute;
 	top: 0;
 	right: 0;
-	background-color: white;
+	background-image: url(../flower_sequence/flower_bgd.jpg);
 	height: auto;
     width: 100px;
     margin: 25px 0;

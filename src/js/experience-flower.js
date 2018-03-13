@@ -12,5 +12,5 @@ var flowerMusic = new Howl({
 
 flowerMusic.play();
 
-// TweenMax.staggerTo(".flower", 1, { scale: 2.0, repeat: -1}, 0.1);
+TweenMax.staggerTo(".flower", 1, { scale: 2.0, repeat: -1}, 0.1);
 

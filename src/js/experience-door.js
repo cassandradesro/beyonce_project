@@ -120,7 +120,7 @@ document.addEventListener("keyup", function (e) {
     mainMusic.play();
   }
 
-  if (e.keyCode === 75 || e.keyCode === 74 || e.keyCode === 76) {
+  if (e.keyCode === 78 || e.keyCode === 79 || e.keyCode === 80) {
     console.log("let go of a key!");
 
     keyWasPressed = false;

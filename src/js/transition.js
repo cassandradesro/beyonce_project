@@ -37,4 +37,9 @@ $transitionVideo.addEventListener("ended", function() {
 	console.log("video has ended!");
 	$transitionVideo.play();
 	document.location.href = nextPageURL;
-})
+});
+
+
+
+
+

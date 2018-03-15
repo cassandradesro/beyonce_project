@@ -11,7 +11,7 @@ var flowerMusic = new Howl({
 
 flowerMusic.play();
 
-floraButtons = [
+var floraButtons = [
   "flower_01.png",
   "flower_02.png",
   "flower_03.png",
@@ -33,14 +33,62 @@ var $flora6 = document.querySelector(".flora6");
 var $flora7 = document.querySelector(".flora7");
 var $flora8 = document.querySelector(".flora8");
 var $flora9 = document.querySelector(".flora9");
-
+var $two = document.querySelectorAll(".two");
+var $three = document.querySelectorAll(".three");
+var $four = document.querySelectorAll(".four");
+var $five = document.querySelectorAll(".five");
+var $six = document.querySelectorAll(".six");
+var $seven = document.querySelectorAll(".seven");
+var $eight = document.querySelectorAll(".eight");
+var $nine = document.querySelectorAll(".nine");
+var $one = document.querySelectorAll(".one");
 $flora1.addEventListener("click", function(){
   console.log("clicked on flora1 bitch");
-  document.querySelector
-
-})
+  for (var i = 0; i < $four.length; i++) {
+    $four[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }
+  for (var i = 0; i < $three.length; i++) {
+    $three[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }
+  for (var i = 0; i < $two.length; i++) {
+    $two[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }
+  for (var i = 0; i < $eight.length; i++) {
+    $eight[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }
+  for (var i = 0; i < $six.length; i++) {
+    $six[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }]
+  for (var i = 0; i < $five.length; i++) {
+    $five[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }
+  for (var i = 0; i < $nine.length; i++) {
+    $nine[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }
+}); 
 $flora2.addEventListener("click", function(){
   console.log("clicked on flora2 bitch")
+  for (var i = 0; i < $four.length; i++) {
+    $four[i].setAttribute("src", "dist/flower_sequence/flower_02.png");
+  }
+  for (var i = 0; i < $three.length; i++) {
+    $three[i].setAttribute("src", "dist/flower_sequence/flower_02.png");
+  }
+  for (var i = 0; i < $two.length; i++) {
+    $two[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }
+  for (var i = 0; i < $eight.length; i++) {
+    $eight[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }
+  for (var i = 0; i < $six.length; i++) {
+    $six[i].setAttribute("src", "dist/flower_sequence/flower_03.png");
+  }]
+  for (var i = 0; i < $five.length; i++) {
+    $five[i].setAttribute("src", "dist/flower_sequence/flower_04.png");
+  }
+  for (var i = 0; i < $nine.length; i++) {
+    $nine[i].setAttribute("src", "dist/flower_sequence/flower_02.png");
+  }
 })
 $flora3.addEventListener("click", function(){
   console.log("clicked on flora3 bitch")

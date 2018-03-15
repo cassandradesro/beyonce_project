@@ -12,7 +12,7 @@ var flowerMusic = new Howl({
 
 flowerMusic.play();
 
-floraButtons = ["flower_01.png", "flower_02.png", "flower_03.png", "flower_04.png", "flower_05.png", "flower_06.png", "flower_07.png", "flower_08.png", "flower_09.png"];
+var floraButtons = ["flower_01.png", "flower_02.png", "flower_03.png", "flower_04.png", "flower_05.png", "flower_06.png", "flower_07.png", "flower_08.png", "flower_09.png"];
 
 var $flora1 = document.querySelector(".flora1");
 var $flora2 = document.querySelector(".flora2");
@@ -23,10 +23,20 @@ var $flora6 = document.querySelector(".flora6");
 var $flora7 = document.querySelector(".flora7");
 var $flora8 = document.querySelector(".flora8");
 var $flora9 = document.querySelector(".flora9");
-
+var $two = document.querySelectorAll(".two");
+var $three = document.querySelectorAll(".three");
+var $four = document.querySelectorAll(".four");
+var $five = document.querySelectorAll(".five");
+var $six = document.querySelectorAll(".six");
+var $seven = document.querySelectorAll(".seven");
+var $eight = document.querySelectorAll(".eight");
+var $nine = document.querySelectorAll(".nine");
+var $one = document.querySelectorAll(".one");
 $flora1.addEventListener("click", function () {
   console.log("clicked on flora1 bitch");
-  document.querySelector;
+  for (var i = 0; i < $four.length; i++) {
+    $four[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+  }
 });
 $flora2.addEventListener("click", function () {
   console.log("clicked on flora2 bitch");

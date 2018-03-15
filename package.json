@@ -4,7 +4,8 @@
   "description": "A good starting point for new Circus students",
   "main": "gulpfile.js",
   "dependencies": {
-    "disable-scroll": "^0.4.0"
+    "disable-scroll": "^0.4.0",
+    "howler": "^2.0.9"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

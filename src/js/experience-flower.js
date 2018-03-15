@@ -46,9 +46,11 @@ $flora1.addEventListener("click", function(){
   console.log("clicked on flora1 bitch");
   for (var i = 0; i < $four.length; i++) {
     $four[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+    console.log("beep");
   }
   for (var i = 0; i < $three.length; i++) {
     $three[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
+    console.log("boop");
   }
   for (var i = 0; i < $two.length; i++) {
     $two[i].setAttribute("src", "dist/flower_sequence/flower_01.png");
@@ -89,7 +91,7 @@ $flora2.addEventListener("click", function(){
   for (var i = 0; i < $nine.length; i++) {
     $nine[i].setAttribute("src", "dist/flower_sequence/flower_02.png");
   }
-})
+});
 $flora3.addEventListener("click", function(){
   console.log("clicked on flora3 bitch")
 })

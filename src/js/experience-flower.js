@@ -26,15 +26,18 @@ for (var i = 0; i < 800; i++) {
 
 var userClick = [];
 
-document.body.addEventListener("click", function(e){  
-  console.log("clicked")
-  userClick.push(e.target.classList, e.target.src);
+document.querySelector(".click-flower-container").addEventListener("click", function(e){  
+  if (e.target.src){
+    console.log("clicked")
+    userClick.push(e.target.src);
+    var $flower = document.querySelectorAll(".flower");
+    for (var i = 0; i < $flower.length; i++) {
+      $flower[i].setAttribute("src", userClick[i % userClick.length]);
+    }
+  }
 });
 
-var $flower = document.querySelectorAll(".flower");
-for (var i = 0; i < $flower.length; i++) {
-  $flower[i]
-}
+
 // var floraButtons = [
 //   "flower_01.png",
 //   "flower_02.png",
@@ -142,5 +145,5 @@ for (var i = 0; i < $flower.length; i++) {
 // $flora9.addEventListener("click", function(){
 //   console.log("clicked on flora9 bitch")
 // })
-// // TweenMax.staggerTo(".flower", 1, { scale: 2.0, repeat: -1}, 0.1);
+TweenMax.staggerTo(".flower", 1, { scale: 2.0, repeat: -1}, 0.1);
 

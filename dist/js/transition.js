@@ -15,17 +15,24 @@ var transitionMusic = new Howl({
 
 var $transitionVideo = document.getElementById("transition-video-player");
 
-document.body.addEventListener("keydown", function (e) {
-  if (e.keyCode == 32) {
-    console.log("you've hit the spacebar so you should see your transition!");
-    if (transitionMusic.playing() === false) {
-      transitionMusic.play();
-      $transitionVideo.currentTime = 0;
-      $transitionVideo.play();
-      $transitionVideo.style.display = "block";
-    }
-  };
-});
+var _setUpTransition = function setUpTransition() {
+  _setUpTransition = function setUpTransition() {};
+  document.body.addEventListener("keydown", function (e) {
+    if (e.keyCode == 32) {
+      console.log("you've hit the spacebar so you should see your transition!");
+      if (transitionMusic.playing() === false) {
+        transitionMusic.play();
+        $transitionVideo.currentTime = 0;
+        $transitionVideo.play();
+        $transitionVideo.style.display = "block";
+      }
+    };
+  });
+};
+
+document.body.addEventListener("keyup", _setUpTransition);
+setTimeout(_setUpTransition, 3000);
+
 document.body.addEventListener("keyup", function (e) {
   if (e.keyCode == 32) {
     console.log("you've stopped the spacebar so your transition should restart!");

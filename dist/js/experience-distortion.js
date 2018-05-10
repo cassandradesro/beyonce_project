@@ -249,6 +249,7 @@ var distortion_z = new Howl({
     console.log('flowerMusic Finished!');
   }
 });
+
 document.addEventListener("keydown", function (e) {
   if (e.keyCode == 65 && keyWasPressed === false) {
     // a
@@ -263,78 +264,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_a.play();
-  }
-  if (e.keyCode == 65 && keyWasPressed === false) {
-    // a
-
-    keyWasPressed = true;
-
-    var newVideoURL = "dist/distortion_video/Distortion_1.mp4";
-    $distortionPlayerSource.setAttribute('src', newVideoURL);
-    $distortionPlayer.classList.add("active");
-    $distortionPlayer.load();
-    $distortionPlayer.currentTime = $mainPlayer.currentTime;
-    $distortionPlayer.play();
-    distortion_main.stop();
-    distortion_a.play();
-  }
-  if (e.keyCode == 65 && keyWasPressed === false) {
-    // a
-
-    keyWasPressed = true;
-
-    var newVideoURL = "dist/distortion_video/Distortion_1.mp4";
-    $distortionPlayerSource.setAttribute('src', newVideoURL);
-    $distortionPlayer.classList.add("active");
-    $distortionPlayer.load();
-    $distortionPlayer.currentTime = $mainPlayer.currentTime;
-    $distortionPlayer.play();
-    distortion_main.stop();
-    distortion_a.play();
-  }
-  if (e.keyCode == 65 && keyWasPressed === false) {
-    // a
-
-    keyWasPressed = true;
-
-    var newVideoURL = "dist/distortion_video/Distortion_1.mp4";
-    $distortionPlayerSource.setAttribute('src', newVideoURL);
-    $distortionPlayer.classList.add("active");
-    $distortionPlayer.load();
-    $distortionPlayer.currentTime = $mainPlayer.currentTime;
-    $distortionPlayer.play();
-    distortion_main.stop();
-    distortion_a.play();
-  }
-  if (e.keyCode == 65 && keyWasPressed === false) {
-    // a
-
-    keyWasPressed = true;
-
-    var newVideoURL = "dist/distortion_video/Distortion_1.mp4";
-    $distortionPlayerSource.setAttribute('src', newVideoURL);
-    $distortionPlayer.classList.add("active");
-    $distortionPlayer.load();
-    $distortionPlayer.currentTime = $mainPlayer.currentTime;
-    $distortionPlayer.play();
-    distortion_main.stop();
-    distortion_a.play();
-  }
-  if (e.keyCode == 65 && keyWasPressed === false) {
-    // a
-
-    keyWasPressed = true;
-
-    var newVideoURL = "dist/distortion_video/Distortion_1.mp4";
-    $distortionPlayerSource.setAttribute('src', newVideoURL);
-    $distortionPlayer.classList.add("active");
-    $distortionPlayer.load();
-    $distortionPlayer.currentTime = $mainPlayer.currentTime;
-    $distortionPlayer.play();
-    distortion_main.stop();
-    distortion_a.play();
-  }
-  if (e.keyCode == 66 && keyWasPressed === false) {
+  } else if (e.keyCode == 66 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -347,8 +277,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_b.play();
-  }
-  if (e.keyCode == 67 && keyWasPressed === false) {
+  } else if (e.keyCode == 67 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -361,8 +290,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_c.play();
-  }
-  if (e.keyCode == 68 && keyWasPressed === false) {
+  } else if (e.keyCode == 68 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -375,8 +303,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_d.play();
-  }
-  if (e.keyCode == 69 && keyWasPressed === false) {
+  } else if (e.keyCode == 69 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -389,8 +316,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_e.play();
-  }
-  if (e.keyCode == 70 && keyWasPressed === false) {
+  } else if (e.keyCode == 70 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -403,8 +329,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_f.play();
-  }
-  if (e.keyCode == 71 && keyWasPressed === false) {
+  } else if (e.keyCode == 71 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -417,8 +342,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_g.play();
-  }
-  if (e.keyCode == 72 && keyWasPressed === false) {
+  } else if (e.keyCode == 72 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -431,8 +355,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_h.play();
-  }
-  if (e.keyCode == 73 && keyWasPressed === false) {
+  } else if (e.keyCode == 73 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -445,8 +368,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_i.play();
-  }
-  if (e.keyCode == 74 && keyWasPressed === false) {
+  } else if (e.keyCode == 74 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -459,8 +381,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_j.play();
-  }
-  if (e.keyCode == 75 && keyWasPressed === false) {
+  } else if (e.keyCode == 75 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -473,8 +394,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_k.play();
-  }
-  if (e.keyCode == 76 && keyWasPressed === false) {
+  } else if (e.keyCode == 76 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -487,8 +407,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_l.play();
-  }
-  if (e.keyCode == 77 && keyWasPressed === false) {
+  } else if (e.keyCode == 77 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -501,8 +420,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_m.play();
-  }
-  if (e.keyCode == 78 && keyWasPressed === false) {
+  } else if (e.keyCode == 78 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -515,8 +433,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_n.play();
-  }
-  if (e.keyCode == 79 && keyWasPressed === false) {
+  } else if (e.keyCode == 79 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -529,8 +446,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_o.play();
-  }
-  if (e.keyCode == 80 && keyWasPressed === false) {
+  } else if (e.keyCode == 80 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -543,8 +459,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_p.play();
-  }
-  if (e.keyCode == 81 && keyWasPressed === false) {
+  } else if (e.keyCode == 81 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -557,8 +472,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_q.play();
-  }
-  if (e.keyCode == 82 && keyWasPressed === false) {
+  } else if (e.keyCode == 82 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -571,8 +485,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_r.play();
-  }
-  if (e.keyCode == 83 && keyWasPressed === false) {
+  } else if (e.keyCode == 83 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -585,8 +498,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_s.play();
-  }
-  if (e.keyCode == 84 && keyWasPressed === false) {
+  } else if (e.keyCode == 84 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -599,8 +511,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_t.play();
-  }
-  if (e.keyCode == 85 && keyWasPressed === false) {
+  } else if (e.keyCode == 85 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -613,8 +524,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_u.play();
-  }
-  if (e.keyCode == 86 && keyWasPressed === false) {
+  } else if (e.keyCode == 86 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -627,8 +537,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_v.play();
-  }
-  if (e.keyCode == 87 && keyWasPressed === false) {
+  } else if (e.keyCode == 87 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -641,8 +550,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_w.play();
-  }
-  if (e.keyCode == 88 && keyWasPressed === false) {
+  } else if (e.keyCode == 88 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -655,8 +563,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_x.play();
-  }
-  if (e.keyCode == 89 && keyWasPressed === false) {
+  } else if (e.keyCode == 89 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -669,8 +576,7 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_y.play();
-  }
-  if (e.keyCode == 90 && keyWasPressed === false) {
+  } else if (e.keyCode == 90 && keyWasPressed === false) {
     // a
 
     keyWasPressed = true;
@@ -683,9 +589,8 @@ document.addEventListener("keydown", function (e) {
     $distortionPlayer.play();
     distortion_main.stop();
     distortion_z.play();
-  }
-  if (e.keyCode == 32) {
-    // a
+  } else if (e.keyCode == 32) {
+    // space
     distortion_main.stop();
     distortion_a.stop();
     distortion_b.stop();

@@ -78,9 +78,9 @@ document.addEventListener("keyup", function (e) {
   }
 });
 
-if (e.keyCode == 32) {
-  beginMusic.stop();
-  middleMusic.stop();
-  endMusic.stop();
-}
+// if (e.keyCode == 32){
+//     beginMusic.stop();
+//     middleMusic.stop();
+//     endMusic.stop();
+// }
 //# sourceMappingURL=experience-water.js.map

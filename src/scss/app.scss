@@ -14,7 +14,7 @@ TABLE OF CONTENTS:
 
 @import 'reset';
 
-
+$breakpoint-mobile: 480px;
 /* 1. Main Layout ================================= */
 
 * {
@@ -30,27 +30,45 @@ html, body{
 	background: #ccc;
 }
 
-.interaction-instructions{
+.interaction-instructions-container {	
 	color: black;
-	font-size: 1rem;
-	font-family: Helvetica;
-	padding-top: 800px;
+	font-size: .8rem;
+	font-family: Helvetica, sans-serif;
+	position: absolute;
+	bottom: 5%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
 
-	span{
-		border: none;
-		background-color: black;
-		color: white;
+	.interaction{
+		font-size: 1.5rem;
+		font-weight: bold;
 		text-transform: uppercase;
-		padding: 20px 12px;
-		font-size: 1.4rem;
-		width: 30px;
-		height: 15px;
+		padding: 10px 0;
+	}
+	div{
+		animation: bounce 1s infinite;
+		position: relative;
+		img{
+			width: 24px;
+
+		}
+	}
+	&.white{
+		color: white;
 	}
 }
 
 #transition-video-player {
 	display: none;
 	z-index: 100000;
+	// @media screen and (orientation:portrait) {
+	//     display: flex;
+	//     justify-content: center;
+	//     align-items: center;
+
+	// }
 }
 
 #scene {
@@ -157,7 +175,7 @@ html, body{
 		font-family: Helvetica, sans-serif;
 		padding-bottom: 10px;
 	}
-	div, h1{
+	.menu, h1{
 
 		margin: 25px;
 
@@ -169,11 +187,38 @@ html, body{
 			font-weight: 400;
 		}
 	}
-	div{
+	.menu{
 		display: flex;
 		width: auto;
 		flex-direction: column;
 		align-items: flex-end;
+	}
+	.hamburger{
+		display: none;
+	}
+	@media (max-width: $breakpoint-mobile) {
+		.menu{
+			visibility: hidden;
+			&.active{
+				visibility: visible;
+			}
+		}
+
+		.hamburger{
+			display: block;
+			width: 32px;
+			height: 32px;
+			margin: 25px;
+		
+			span{
+				display: block;
+				width: 90%;
+				height: 2px;
+				margin-bottom: 3px;
+				background-color: #000;
+
+			}
+		}
 	}
 	
 }
@@ -184,6 +229,9 @@ html, body{
 	&.active{
 		z-index: 10000000;
 		visibility: hidden;
+	}
+	@media screen and (orientation:portrait) {
+	    display: none;
 	}
 }
 
@@ -232,7 +280,11 @@ html, body{
 
 
 
-
+@keyframes bounce { 
+	0% { top: 0; } 
+	50% { top: 8px; } 
+	100% { top: 0; } 
+}
 
 
 

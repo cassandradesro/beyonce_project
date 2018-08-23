@@ -27,7 +27,8 @@
 			</div>
 		</div>
 		<div id="scene">
-
+			<audio class="audio" src="dist/polaroid_video/Audio1.mp3" autoplay loop >
+			</audio>
 		  <video id="transition-video-player" class="video" muted>
 		    <source type="video/mp4" src="dist/transition_sequence/Title_sequence.mp4">
 		  </video>
@@ -76,13 +77,23 @@
 		  </div>
 			
 		  <div class="interaction-instructions-container"> 
-		  	<div><img class="interaction-animation" src="dist/img/down-arrow.png" alt="pointing down arrow"></div>
-		  	<p class="interaction">RETURN</p>
-		  	<p class="interaction-instructions">Press the return key to experience moments of Beyonce's career.</p>
+			  	<div class="page-interaction">
+			  		<img class="interaction-animation" src="dist/img/down-arrow.png" alt="pointing down arrow">
+			  		<p class="interaction-key">RETURN</p>
+			  		<p class="interaction-instructions">Press the return key to experience moments of Beyonce's career.</p>
+			  		<p>Hold spacebar to taste the next experience.</p>
+
+			  	</div>
 		  </div>
-		</div>
-		<audio class="audio" src="dist/polaroid_video/Audio1.mp3" autoplay loop >
-		</audio>
+		   <div class="lemon-interaction">
+<!-- 		   	<img class="droplet" src="dist/transition_sequence/droplet.png">
+		   	<img class="droplet" src="dist/transition_sequence/droplet.png"> -->
+		   	<img class="lemon" src="dist/transition_sequence/lemon.png">
+
+		   	<p>Keep holding spacebar.</p>
+		   </div>
+		</div> <!--end of scene-->
+		
 		
 		<script>
 			var nextPageURL = "distortion.html";

@@ -40,24 +40,48 @@ html, body{
 	flex-direction: column;
 	text-align: center;
 	width: 100%;
-
-	.interaction{
-		font-size: 1.5rem;
-		font-weight: bold;
-		text-transform: uppercase;
-		padding: 10px 0;
-	}
-	div{
-		animation: bounce 1s infinite;
-		position: relative;
-		img{
+	z-index: 10;
+	.page-interaction{
+		.interaction-key{
+			font-size: 1.5rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 10px 0;
+		}
+		.interaction-animation{
+			animation: bounce 1s infinite;
+			position: relative;
 			width: 24px;
-
 		}
 	}
 	&.white{
 		color: white;
 	}
+}
+.lemon-interaction{
+	display: none;
+	position: absolute;
+	bottom: 5%;
+	text-align: center;
+	width: 100%;
+	z-index: 11;
+	color: black;
+	font-size: .8rem;
+	font-family: Helvetica, sans-serif;
+	color: #fff;
+	z-index: 100001;
+
+	.lemon{
+		animation: wiggle 1s infinite;
+		transform: rotate(50deg);
+		width: 100px;
+		position: relative;
+		margin-bottom: 10px;
+	}
+	.droplet{
+		width: 30px;
+
+	}	
 }
 
 #transition-video-player {
@@ -69,6 +93,12 @@ html, body{
 	//     align-items: center;
 
 	// }
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(60deg);}
+  50% {transform: rotate(40deg);}
+  100% {transform: rotate(60deg);}
 }
 
 #scene {
@@ -168,7 +198,7 @@ html, body{
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	z-index: 100000000000;
+	z-index: 12;
 	h1, h2{
 		font-weight: bold;
 		text-transform: uppercase;

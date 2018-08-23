@@ -23,6 +23,7 @@ let setUpTransition = function() {
         $transitionVideo.currentTime = 0;
         $transitionVideo.play();
         $transitionVideo.style.display = "block";
+        document.querySelector(".lemon-interaction").style.display = "block";
       }
     };
   });
@@ -37,6 +38,8 @@ document.body.addEventListener("keyup", function (e) {
   	transitionMusic.pause();
   	$transitionVideo.pause();
   	$transitionVideo.style.display = "none";
+    document.querySelector(".lemon-interaction").style.display = "none";
+
   };
 });
 

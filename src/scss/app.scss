@@ -13,10 +13,43 @@ TABLE OF CONTENTS:
 */
 
 @import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
-$breakpoint-mobile: 480px;
+$breakpoint-mobile: 410px;
 /* 1. Main Layout ================================= */
+@media (max-width: $breakpoint-mobile) {
+	.mobile-disclaimer{
+		background-color: white;
+		width: 100%;
+		min-height: 100vh;
+		position: absolute;
+		top: 0;
+		z-index: 13;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-family: "Lato", sans-serif;
+		font-weight: bold;
+		font-size: 12px;
+		text-transform: uppercase;
+		p{
+			margin-bottom: 25px;
+			letter-spacing: 3px;
+			line-height: 25px;
+		}
+		img{
+			width: 100px;
+		}
+	}
+}
+@media (min-width: $breakpoint-mobile) {
 
+	.mobile-disclaimer{
+		display: none;
+	}
+}
 * {
 	box-sizing: border-box;
 }
@@ -28,8 +61,13 @@ html, body{
 	height: 100%;
 	overflow: hidden;
 	background: #ccc;
-}
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
 
+}
+.white{
+	color: #fff;
+}
 .interaction-instructions-container {	
 	color: black;
 	font-size: .8rem;
@@ -42,20 +80,98 @@ html, body{
 	width: 100%;
 	z-index: 10;
 	.page-interaction{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 		.interaction-key{
 			font-size: 1.5rem;
 			font-weight: bold;
 			text-transform: uppercase;
-			padding: 10px 0;
+			padding: 10px;
+			width: 150px;
+			height: 53px;
+			background-image: url(../img/medium-key.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-bottom: 20px;
+			// background-color: blue;
+		}
+		.interaction-instructions{
+			margin-bottom: 10px;
 		}
 		.interaction-animation{
 			animation: bounce 1s infinite;
+			animation-delay: 3s;
 			position: relative;
-			width: 24px;
+			width: 18px;
+			margin-bottom: 10px;
 		}
+		.finger{
+			display: none;
+			&.remind{
+				display: block;
+				opacity: 0;
+				position: relative;
+				width: 30px;
+				left: 100%;
+				margin-bottom: -40px;
+				animation: point 2s 3s 3 ease-in-out,
+						pointAgain 2s 30s 3 ease-in-out;
+				}	
+		}
+		.spacebar{
+			background-image: url(../img/spacebar.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			padding: 0px 15px 4px 15px;
+			background-position: 50% 50%;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			&.remind{
+				animation: flash 2s 18s 8 ease-in-out;
+			}	
+		}	
 	}
+	
 	&.white{
 		color: white;
+		.interaction-key{
+			background-image: url(../img/white-medium-key.png);
+		}
+		.spacebar{
+			background-image: url(../img/white-spacebar.png);
+		}
+		&.letter{
+			.interaction-key{
+				width: unset;
+				height: unset;
+				span{
+					background-image: url(../img/white-small-key.png);
+				}				
+			}
+			p{
+				padding-left: 25px;
+			}
+		}
+	}
+	&.letter{
+		.interaction-key{
+			background-image: none;
+			span{
+				background-image: url(../img/small-key.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: 50%;
+				padding: 19px;
+				margin: 10px;
+
+			}
+		}
+		p{
+			padding-left: 90px;
+		}
 	}
 }
 .lemon-interaction{
@@ -64,13 +180,26 @@ html, body{
 	bottom: 5%;
 	text-align: center;
 	width: 100%;
-	z-index: 11;
+	z-index: 100001;
 	color: black;
 	font-size: .8rem;
 	font-family: Helvetica, sans-serif;
 	color: #fff;
-	z-index: 100001;
+	p{
+		margin-top: 10px;
+	}
+	span{
+		background-image: url(../img/white-spacebar.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding: 0px 15px 4px 15px;
+		// font-weight: bold;
+		background-position: 50% 50%;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		animation: flash 2s 22s 8 ease-in-out;
 
+	}
 	.lemon{
 		animation: wiggle 1s infinite;
 		transform: rotate(50deg);
@@ -78,27 +207,44 @@ html, body{
 		position: relative;
 		margin-bottom: 10px;
 	}
-	.droplet{
-		width: 30px;
+	.droplets{
+		position: relative;
+		left: 45%;
+		height: 50px;
+		.droplet{
+			width: 30px;
+			position: absolute;
+			transform-origin: center;
+			opacity: 0;
+		}	
+		.one-s{
+			animation: 6s appear;
+			top: -11%;
+			left: 6%;
+			transform: rotate(24deg);
+			animation-delay: .5s;
 
-	}	
+		}
+		.two-s{
+			animation: 5s appear;
+			top: 32%;
+			left: 8.5%;
+			transform: rotate(55deg);
+			animation-delay: 1.5s;
+		}
+		.three-s{
+			animation: 4s appear;
+			animation-delay: 2.5s;
+			top: 90%;
+			left: 9.5%;
+			transform: rotate(75deg);
+		}
+	}
 }
 
 #transition-video-player {
 	display: none;
 	z-index: 100000;
-	// @media screen and (orientation:portrait) {
-	//     display: flex;
-	//     justify-content: center;
-	//     align-items: center;
-
-	// }
-}
-
-@keyframes wiggle {
-  0% {transform: rotate(60deg);}
-  50% {transform: rotate(40deg);}
-  100% {transform: rotate(60deg);}
 }
 
 #scene {
@@ -128,7 +274,7 @@ html, body{
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		width: 35%;
+		width: 25%;
 		transform: translate(-50%, -50%);
 		transform-origin: bottom center; 
 
@@ -136,20 +282,20 @@ html, body{
 		box-shadow: 10px 10px 67px -1px;
 
 		&:nth-child(1) {
-			transform: rotate(4deg) translate(-55%, -50%); 
+			transform: rotate(5deg) translate(-55%, -50%); 
 
 		}
 
 		&:nth-child(2) {
-			transform: rotate(-4deg) translate(-50%, -60%); 
+			transform: rotate(-6deg) translate(-50%, -70%); 
 
 		}
 		&:nth-child(3) {
-			transform: rotate(8deg) translate(-40%, -50%); 
+			transform: rotate(30deg) translate(-40%, -60%); 
 
 		}
 		&:nth-child(4) {
-			transform: rotate(-8deg) translate(-60%, -50%); 
+			transform: rotate(-20deg) translate(-20%, -50%); 
 
 		}
 		&:nth-child(5) {
@@ -157,31 +303,31 @@ html, body{
 
 		}
 		&:nth-child(6) {
-			transform: rotate(10deg) translate(-70%, -50%); 
+			transform: rotate(22deg) translate(-15%, -80%); 
 
 		}
 		&:nth-child(7) {
-			transform: rotate(-12deg) translate(-50%, -60%); 
+			transform: rotate(-14deg) translate(-50%, -80%); 
 
 		}
 		&:nth-child(8) {
-			transform: rotate(10deg) translate(-55%, -40%); 
+			transform: rotate(11deg) translate(-25%, -40%); 
 
 		}
 		&:nth-child(9) {
-			transform: rotate(-8deg) translate(-50%, -50%); 
+			transform: rotate(-9deg) translate(10%, -90%); 
 
 		}
 		&:nth-child(10) {
-			transform: rotate(12deg) translate(-60%, -50%); 
+			transform: rotate(23deg) translate(-70%, -20%); 
 
 		}
 		&:nth-child(11) {
-			transform: rotate(4deg) translate(-50%, -70%); 
+			transform: rotate(-15deg) translate(-10%, -70%); 
 
 		}
 		&:nth-child(12) {
-			transform: rotate(-10deg) translate(-80%, -50%); 
+			transform: rotate(-26deg) translate(-70%, -80%); 
 
 		}
 		&:nth-child(13) {
@@ -199,6 +345,13 @@ html, body{
 	display: flex;
 	justify-content: space-between;
 	z-index: 12;
+
+	.fas{
+		opacity: 0;
+		animation: flash 2s 5 ease-in-out;
+		margin-top: 25px;
+
+	}
 	h1, h2{
 		font-weight: bold;
 		text-transform: uppercase;
@@ -249,8 +402,7 @@ html, body{
 
 			}
 		}
-	}
-	
+	}	
 }
 
 
@@ -260,69 +412,46 @@ html, body{
 		z-index: 10000000;
 		visibility: hidden;
 	}
-	@media screen and (orientation:portrait) {
-	    display: none;
-	}
-}
 
-
-.flower-container{
-	background-image: url(../flower_sequence/flower_bgd.jpg);
 }
-.flowers{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-#flowers img{
-	width: 5%;
-	height: 5%;
-}
-
-.click-flower-container{
-	font-family: Helvetica;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	z-index: 100000000;
-	position: absolute;
-	top: 0;
-	right: 0;
-	background-image: url(../flower_sequence/flower_bgd.jpg);
-	height: auto;
-    width: 100px;
-    margin: 25px 0;
-    padding: 20px;
-	p{
-		text-align: center;
-		padding-bottom: 20px;		
-	}
-	div{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		.click-flower {
-			width: 60%;
-			height: 60%;
-		}
-	}
-}
-
-
 
 @keyframes bounce { 
 	0% { top: 0; } 
 	50% { top: 8px; } 
 	100% { top: 0; } 
 }
+@keyframes appear { 
+	0% { opacity: 0; } 
+	100% { opacity: 1; } 
+}
+@keyframes point { 
+	0%, 100% {
+		opacity:1;	transform: rotate(-87deg) translate(0px, 0px);
+	  }
+	  50% {
+		opacity:0; transform: rotate(-87deg) translate(5px, 5px);
+	  }
+}
+@keyframes pointAgain { 
+	0%, 100% {
+		opacity:1;	transform: rotate(-87deg) translate(0px, 0px);
+	  }
+	  50% {
+		opacity:0; transform: rotate(-87deg) translate(5px, 5px);
+	  }
+}
 
+@keyframes wiggle {
+	0% {transform: rotate(60deg);}
+	50% {transform: rotate(50deg);}
+	100% {transform: rotate(60deg);}
+}
 
-
-
-
-
-
-
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .2; } 
+	100% { opacity: 1; }
+}
 
 
 

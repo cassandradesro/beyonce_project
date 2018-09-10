@@ -256,6 +256,9 @@ var distortion_z = new Howl({
 
 
 document.addEventListener("keydown", function (e) {
+  if (document.querySelector(".finger").classList.contains("remind")){
+    document.querySelector(".finger").classList.remove("remind");
+  }
   if (e.keyCode == 65 && keyWasPressed === false) { // a
     
     keyWasPressed = true;
@@ -629,7 +632,9 @@ document.addEventListener("keydown", function (e) {
 
 document.addEventListener("keyup", function (e) {
     console.log("let go of a key!");
-
+    if (document.querySelector(".spacebar").classList.contains("remind")){
+			document.querySelector(".spacebar").classList.remove("remind");
+		}
     keyWasPressed = false;
     var mainVideo = "dist/new_distortion_video_recompressed/Distortion_main.mp4";
 

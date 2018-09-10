@@ -52,6 +52,9 @@ var fireMusic = new Howl({
 });
 
 document.addEventListener("keydown", function (e) {
+  if (document.querySelector(".finger").classList.contains("remind")) {
+    document.querySelector(".finger").classList.remove("remind");
+  }
   if (e.keyCode == 32) {
     fireMusic.stop();
     grassMusic.stop();
@@ -112,6 +115,7 @@ document.addEventListener("keydown", function (e) {
 });
 
 document.addEventListener("keyup", function (e) {
+
   if (e.keyCode == 32) {
     mainMusic.play();
   }

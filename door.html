@@ -3,29 +3,24 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Door</title>
+		<title>Taste of Lemonade</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
-
 		<link rel="stylesheet" href="dist/css/app.css">
-
 	</head>
 	<body class="door-container">
+		<div class="mobile-disclaimer"></div>
 		<div class="text">
 			<h1>Beyonce</h1>
+			<p><i class="fas fa-volume-up"></i></p>
 			<div class="menu">
 				<h2>Lemonade</h2>
 				<p>Watch</p>
 				<p>Listen</p>
 				<p>Buy</p>
 			</div>
-			<div class="hamburger">
-				<span><span>
-				<span><span>
-				<span><span>
-
-			</div>
+		
 		</div>
 		<div id="scene">
 		  	<video id="transition-video-player" class="video" muted>
@@ -35,27 +30,34 @@
 			  	<video  id="door-video-player" class="video" autoplay loop muted>
 			  	  <source type="video/mp4" src="dist/door_video/door_main.mp4">
 			  	</video>
-		<div class="interaction-instructions-container"> 
+		<div class="interaction-instructions-container letter"> 
 			<div class="page-interaction">
-				<p class="interaction-key">o p n</p>
+				<div>
+					<img class="finger remind" src="dist/img/finger.png" alt="pointing down arrow">
+					<p class="interaction-key"><span>o</span><span>p</span><span>n</span></p>
+				</div>
 				<p class="interaction-instructions">Press and hold O, P, or N on the keyboard to open the door.</p>
-				<p>Hold spacebar to taste the next experience.</p>
+				<p>Hold <span class="spacebar remind">spacebar</span> to taste the next experience.</p>
 
 			</div>
 		</div>
 		<div class="lemon-interaction">
-<!-- 		   	<img class="droplet" src="dist/transition_sequence/droplet.png">
-		   	<img class="droplet" src="dist/transition_sequence/droplet.png"> -->
-		   	<img class="lemon" src="dist/transition_sequence/lemon.png">
+				<div class="droplets">
+					   <img class="one-s droplet" src="dist/transition_sequence/droplet.png">
+					   <img class="two-s droplet" src="dist/transition_sequence/droplet.png">
+					   <img class="three-s droplet" src="dist/transition_sequence/droplet.png">
+				</div>
+			  
+			  <img class="lemon" src="dist/transition_sequence/lemon.png">
 
-		   	<p>Keep holding spacebar.</p>
-		</div>
+			  <p>Keep holding <span class="spacebar">spacebar</span>.</p>
+		  </div>
 
 		</div>
 		
 		
 		<script>
-			var nextPageURL = "flower.html";
+			var nextPageURL = "index.html";
 		</script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.14/howler.core.min.js"></script>

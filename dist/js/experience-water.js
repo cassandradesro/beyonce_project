@@ -34,10 +34,16 @@ var endMusic = new Howl({
 });
 
 document.addEventListener("keydown", function (e) {
+  if (document.querySelector(".finger").classList.contains("remind")) {
+    document.querySelector(".finger").classList.remove("remind");
+  }
   if (e.keyCode == 32) {
     beginMusic.stop();
     middleMusic.stop();
     endMusic.stop();
+    if (document.querySelector(".spacebar").classList.contains("remind")) {
+      document.querySelector(".spacebar").classList.remove("remind");
+    }
   }
   if (e.keyCode == 16 && keyWasPressed === false) {
 

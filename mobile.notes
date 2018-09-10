@@ -1,7 +1,0 @@
-mobile
-
-let mobile = function(){
-	return (window.innderWidth < 768)
-}
-
-let notMobile = function
